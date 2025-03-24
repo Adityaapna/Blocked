@@ -140,7 +140,7 @@
             <p><strong>Time:</strong> <span id="block-time"></span></p>
         </div>
         
-        <a href="#" class="button">Return to Safety</a>
+        <a href="https://apna.co" class="button">Return to Safety</a>
         
         <footer>
             <p>If you believe this page has been blocked in error, please contact your IT department.</p>
@@ -152,8 +152,14 @@
         // Set the current time
         document.getElementById('block-time').textContent = new Date().toLocaleString();
         
-        // Set the blocked URL to the current URL
-        document.getElementById('blocked-url').textContent = document.referrer;
+        // Get and display the blocked URL from the URL parameters
+        function getBlockedUrlFromQueryParam() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const blockedUrl = urlParams.get('blocked');
+            return blockedUrl || "Unknown URL";
+        }
+        
+        document.getElementById('blocked-url').textContent = getBlockedUrlFromQueryParam();
     </script>
 </body>
 </html>
