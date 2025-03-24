@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apna - Access Blocked</title>
+    <style>
+        :root {
+            --apna-primary: #1D42D9;
+            --apna-secondary: #5475E8;
+            --apna-light: #E8EDFC;
+            --apna-dark: #0A1533;
+            --apna-error: #EF4444;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background-color: #f9fafb;
+            color: var(--apna-dark);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 600px;
+            text-align: center;
+            background-color: white;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+        
+        .logo {
+            width: 120px;
+            margin-bottom: 24px;
+        }
+        
+        .icon {
+            background-color: var(--apna-light);
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px auto;
+        }
+        
+        .icon svg {
+            width: 40px;
+            height: 40px;
+            fill: var(--apna-error);
+        }
+        
+        h1 {
+            color: var(--apna-dark);
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+        
+        p {
+            color: #4b5563;
+            margin-bottom: 24px;
+            line-height: 1.6;
+        }
+        
+        .details {
+            background-color: var(--apna-light);
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 24px;
+            text-align: left;
+        }
+        
+        .details p {
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+        
+        .details p:last-child {
+            margin-bottom: 0;
+        }
+        
+        .button {
+            display: inline-block;
+            background-color: var(--apna-primary);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+        
+        .button:hover {
+            background-color: var(--apna-secondary);
+        }
+        
+        footer {
+            margin-top: 40px;
+            font-size: 12px;
+            color: #6b7280;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Apna Logo -->
+        <svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 40">
+            <path d="M20 10 L40 10 L30 30 Z" fill="#1D42D9"/>
+            <path d="M50 10 L70 10 L60 30 Z" fill="#5475E8"/>
+            <text x="35" y="35" fill="#0A1533" font-size="16" font-weight="bold">apna</text>
+        </svg>
+        
+        <div class="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM4 12c0-4.42 3.58-8 8-8 1.85 0 3.55.63 4.9 1.69L5.69 16.9C4.63 15.55 4 13.85 4 12zm8 8c-1.85 0-3.55-.63-4.9-1.69L18.31 7.1C19.37 8.45 20 10.15 20 12c0 4.42-3.58 8-8 8z"/>
+            </svg>
+        </div>
+        
+        <h1>Access to this page has been blocked</h1>
+        
+        <p>This website has been blocked according to your organization's security policy. The content may contain potential security threats or violate your organization's acceptable use policy.</p>
+        
+        <div class="details">
+            <p><strong>URL:</strong> <span id="blocked-url">https://example.com/blocked-page</span></p>
+            <p><strong>Category:</strong> <span id="block-category">Security Risk</span></p>
+            <p><strong>Policy:</strong> <span id="policy-name">Corporate Security Policy</span></p>
+            <p><strong>Time:</strong> <span id="block-time"></span></p>
+        </div>
+        
+        <a href="#" class="button">Return to Safety</a>
+        
+        <footer>
+            <p>If you believe this page has been blocked in error, please contact your IT department.</p>
+            <p>Apna Security Shield &copy; 2025</p>
+        </footer>
+    </div>
+
+    <script>
+        // Set the current time
+        document.getElementById('block-time').textContent = new Date().toLocaleString();
+        
+        // Set the blocked URL to the current URL
+        document.getElementById('blocked-url').textContent = window.location.href;
+    </script>
+</body>
+</html>
