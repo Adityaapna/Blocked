@@ -153,7 +153,7 @@
         document.getElementById('block-time').textContent = new Date().toLocaleString();
         
         // Set the blocked URL to the current URL
-        document.getElementById('blocked-url').textContent = window.location.href;
+        document.getElementById('blocked-url').textContent = document.referrer;
     </script>
 </body>
 </html>
